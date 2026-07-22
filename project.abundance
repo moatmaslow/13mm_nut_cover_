@@ -140,7 +140,8 @@
         },
         {
           "name": "y-axis degrees",
-          "ioValue": 45
+          "ioValue": 45,
+          "currentEquation": "45"
         },
         {
           "name": "z-axis degrees",
