@@ -7,6 +7,112 @@
   "topLevel": true,
   "allAtoms": [
     {
+      "atomType": "RegularPolygon",
+      "x": 0.3214285714285714,
+      "y": 0.8027777777777778,
+      "uniqueID": "id-8",
+      "ioValues": [
+        {
+          "name": "number of sides",
+          "ioValue": 6
+        },
+        {
+          "name": "diameter",
+          "ioValue": 15
+        }
+      ]
+    },
+    {
+      "atomType": "Extrude",
+      "x": 0.4880952380952381,
+      "y": 0.7805555555555554,
+      "uniqueID": "id-12",
+      "ioValues": [
+        {
+          "name": "geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "height",
+          "ioValue": 7
+        }
+      ]
+    },
+    {
+      "atomType": "Circle",
+      "x": 0.2,
+      "y": 0.382089552238806,
+      "uniqueID": "id-16",
+      "ioValues": [
+        {
+          "name": "diameter",
+          "ioValue": 25
+        }
+      ]
+    },
+    {
+      "atomType": "Extrude",
+      "x": 0.35912698412698413,
+      "y": 0.35833333333333334,
+      "uniqueID": "id-19",
+      "ioValues": [
+        {
+          "name": "geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "height",
+          "ioValue": 9
+        }
+      ]
+    },
+    {
+      "atomType": "Difference",
+      "x": 0.5205026455026455,
+      "y": 0.3194444444444444,
+      "uniqueID": "id-23",
+      "ioValues": [
+        {
+          "name": "retain",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "remove",
+          "ioValue": "__GEOMETRY_INPUT__"
+        }
+      ]
+    },
+    {
+      "atomType": "Export",
+      "x": 0.8601851851851852,
+      "y": 0.6626865671641792,
+      "uniqueID": "id-27",
+      "ioValues": [
+        {
+          "name": "geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "File Type",
+          "ioValue": "STL",
+          "currentEquation": "STL"
+        },
+        {
+          "name": "Resolution (dpi)",
+          "ioValue": 96
+        },
+        {
+          "name": "Part Name",
+          "ioValue": "13mm_nut_cover_",
+          "currentEquation": "13mm_nut_cover_"
+        }
+      ],
+      "type": null,
+      "resolution": 96,
+      "importIndex": 0,
+      "partName": "13mm_nut_cover_"
+    },
+    {
       "atomType": "Output",
       "x": 0.98,
       "y": 0.5,
@@ -123,6 +229,30 @@
       "resolution": 96,
       "importIndex": 0,
       "partName": "13mm_nut_cover_"
+    },
+    {
+      "atomType": "Move",
+      "x": 0.6292286874154263,
+      "y": 0.7732558139534884,
+      "uniqueID": "id-49",
+      "ioValues": [
+        {
+          "name": "geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "xDist",
+          "ioValue": 50
+        },
+        {
+          "name": "yDist",
+          "ioValue": 0
+        },
+        {
+          "name": "zDist",
+          "ioValue": 0
+        }
+      ]
     }
   ],
   "allConnectors": [
@@ -147,14 +277,44 @@
       "ap2ID": "id-23"
     },
     {
-      "ap2Name": "number or geometry",
+      "ap2Name": "geometry",
       "ap1ID": "id-23",
-      "ap2ID": "id-2"
+      "ap2ID": "id-27"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-8",
+      "ap2ID": "id-12"
+    },
+    {
+      "ap2Name": "remove",
+      "ap1ID": "id-12",
+      "ap2ID": "id-23"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-16",
+      "ap2ID": "id-19"
+    },
+    {
+      "ap2Name": "retain",
+      "ap1ID": "id-19",
+      "ap2ID": "id-23"
     },
     {
       "ap2Name": "geometry",
       "ap1ID": "id-23",
       "ap2ID": "id-27"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-23",
+      "ap2ID": "id-49"
+    },
+    {
+      "ap2Name": "number or geometry",
+      "ap1ID": "id-49",
+      "ap2ID": "id-2"
     }
   ],
   "unitsKey": "MM",
